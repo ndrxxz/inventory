@@ -5,7 +5,7 @@
     if(isset($_POST['submit'])){
         $category = mysqli_real_escape_string($conn, $_POST['category']);
 
-        $query = "INSERT into categories (category) VALUEs ('$category')";
+        $query = "INSERT into categories (category) VALUES ('$category')";
         $query_run = mysqli_query($conn, $query);
 
         if($query_run){
