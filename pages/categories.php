@@ -27,6 +27,7 @@ include("../includes/sidebar.php");
         </div>
     </div>
 
+    <!-- includes the success and error file for message handling -->
     <?php include('success.php') ?>
     <?php include('error.php') ?>
 
@@ -34,10 +35,12 @@ include("../includes/sidebar.php");
         <div class="col-md-12">
             <div class="card my-2">
                 <div class="card-header bg-white">
+                    <!-- button to add new category -->
                     <a href="add-categories.php" class="btn btn-primary float-end">Add Categories</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
+                        <!-- categories table -->
                         <table id="myTable" class="table table-white table-bordered w-100">
                             <thead>
                                 <tr>
@@ -60,7 +63,10 @@ include("../includes/sidebar.php");
                                     <td class="px-1 text-center"><?= $categories['id']; ?></td>
                                     <td class="px-1 text-center"><?= $categories['category']; ?></td>
                                     <td class="px-3 py-2 text-center">
+                                        <!-- edit button for each category -->
                                         <a href="categories-edit.php?id=<?= $categories['id']; ?>" class="btn btn-success btn-sm edit"><span><i class="bi bi-pencil-square"></i> Edit</span></a>
+                                        
+                                        <!-- delete button for each category -->
                                         <a href="categories-delete.php?id=<?= $categories['id']; ?>" class="btn btn-danger btn-sm del"><span><i class="bi bi-trash3-fill"></i> Delete</span></a>
                                     </td>
                                 </tr>
