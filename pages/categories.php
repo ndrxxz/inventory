@@ -1,15 +1,23 @@
 <?php
+    //start a new session
     session_start();
+
+    // include the database connection file
     include('../config/conn.php');
 ?>
 
 <?php
+// set the title of the page
 $title = "Categories | Inventory Management System";
+
+// include the header of the page
 include("../includes/header.php");
 
+// include the sidebar of the page
 include("../includes/sidebar.php");
 ?>
 
+<!-- main content -->
 <div class="container-fluid mt-2">
     <div class="row">
         <div class="col-md-12">
@@ -40,9 +48,11 @@ include("../includes/sidebar.php");
                             </thead>
                             <tbody>
                                 <?php
+                                    // query to get all categories
                                     $query = "SELECT * FROM categories";
                                     $result = mysqli_query($conn, $query);
 
+                                    // check if there are any categories returned by the query
                                     if(mysqli_num_rows($result) > 0){
                                         foreach($result as $categories){
                                 ?>
@@ -57,7 +67,7 @@ include("../includes/sidebar.php");
                                 <?php
                                         }
                                     } else {
-
+                                        // no categories found
                                     }
                                 ?>
                             </tbody>
@@ -69,4 +79,5 @@ include("../includes/sidebar.php");
     </div>
 </div>
 
+<!-- include the footer of the page -->
 <?php include("../includes/footer.php"); ?>
