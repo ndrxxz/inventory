@@ -41,7 +41,7 @@ include("../includes/sidebar.php");
                 <div class="card-body">
                     <div class="table-responsive">
                         <!-- categories table -->
-                        <table id="myTable" class="table table-white table-bordered w-100">
+                        <table id="myTable" class="table table-striped table-bordered w-100">
                             <thead>
                                 <tr>
                                     <th class="px-5 py-2 text-center">ID</th>

@@ -13,7 +13,7 @@
             header('Location: categories.php');
             exit(0);
         } else {
-            $_SESSION['error'] = "Adding Category Successfully!";
+            $_SESSION['error'] = "Failed to Add the Category!";
             header('Location: add-categories.php');
             exit(0);
         }
