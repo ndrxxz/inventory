@@ -1,7 +1,7 @@
             <footer class="footer fixed-bottom bottom-0 z-1">
                 <div class="container-fluid w-100">
                     <div class="row">
-                        <div class="col-12 text-center bg-secondary-subtle p-2">
+                        <div class="col-12 text-center">
                             <h6>Copyright &copy; 2024 | Created with ❤️ by Andrea</h6>
                         </div>
                     </div>
